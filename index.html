@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Liste des idées</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-HjGAURwAf4ySNaaSL5tLzh4Y3vS4J+0UyME7lsA=="> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Ajouter une idée</h1>
+                <div class="form-container">
+                    <form id="idee-form">
+                        <div class="form-group">
+                            <label for="libelle">Libellé :</label>
+                            <input id="libelle" class="form-control" placeholder="Libellé..." required>
+                            <div id="errorLibelle" class="error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="auteur">Auteur :</label>
+                            <input id="auteur" class="form-control" placeholder="Auteur..." required>
+                            <div id="errorAuteur" class="error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message :</label>
+                            <textarea id="message" class="form-control" placeholder="Message..." required maxlength="255"></textarea>
+                            <div id="errorMessage" class="error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="categorie">Catégorie :</label>
+                            <select id="categorie" class="form-control" required>
+                                <option value="">Sélectionner une catégorie</option>
+                                <option value="Santé">Santé</option>
+                                <option value="Éducation">Éducation</option>
+                                <option value="Numérique">Numérique</option>
+                            </select>
+                            <div id="errorCategorie" class="error"></div>
+                        </div>
+                        <button type="submit" id="submitBtn" class="btn btn-custom" disabled>Ajouter une idée</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <h1>Idées soumises</h1>
+                <div id='idee-container' class="row"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+    
+    <script type="module" src="scripts/main.js"></script>
+
+</body>
+</html>
